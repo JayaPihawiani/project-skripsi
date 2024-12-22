@@ -1,0 +1,36 @@
+input {
+  width: 330px;
+  border: 1px solid;
+  padding: 10px;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* desktop responsive */
+@media screen and (max-width: 922px) {
+  input {
+    width: 280px;
+    border: 1px solid;
+    padding: 10px;
+  }
+}
+
+/* tab responsive */
+@media screen and (max-width: 576px) {
+  input {
+    width: 230px;
+    border: 1px solid;
+    padding: 10px;
+  }
+}
+
+/* phone responsive */
+@media screen and (max-width: 350px) {
+  input {
+    width: 180px;
+    border: 1px solid;
+    padding: 7px;
+  }
+}

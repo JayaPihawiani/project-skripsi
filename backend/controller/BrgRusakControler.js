@@ -40,9 +40,6 @@ class BrgRusakController {
   };
 
   getDataRusak = async (req, res) => {
-    if (req.role !== "admin")
-      return res.status(403).json({ msg: "FORBIDDEN ACCESS" });
-
     try {
       const response = await BarangRusak.findAll({
         attributes: ["id", "penyebab", "jumlahRusak"],
@@ -59,9 +56,6 @@ class BrgRusakController {
   };
 
   getDataRusakById = async (req, res) => {
-    if (req.role !== "admin")
-      return res.status(403).json({ msg: "FORBIDDEN ACCESS" });
-
     try {
       const response = await BarangRusak.findOne({
         where: { id: req.params.id },
